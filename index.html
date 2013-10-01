@@ -2,38 +2,17 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Веломаршруты. Самые популярные маршруты городского велопроката. Визуализация Лаборатории данных.</title>
+<title></title>
   <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="image_src" href="images/screenshot.jpg" />
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <!--[if lte IE 8]>
     <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
   <![endif]-->
-  
-  <script type="text/javascript" src="//vk.com/js/api/openapi.js?101"></script>
-
-  <script type="text/javascript">
-    VK.init({apiId: 3908612, onlyWidgets: true});
-  </script>
-
 </head>
 
 <body style="margin:0; padding:0;">
-
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=237838789600836";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    
-
-    <div class="main">
+  <div class="main">
     <script type='text/javascript'>
 
       $( document ).ready(function() {
@@ -46,25 +25,29 @@
           $(".header").css("margin-left", 20);
           $(".smallMap").css("display", "none");
           $("h1").css("font-size",30);
-          $(".after-h1").css("font-size",14);
-          $(".after-h1").css("line-height","22px");
           $(".legend").css("margin-left", cl_W-550);
-          $(".legend").css("margin-top",cl_H-337);
+          $(".legend").css("margin-top",cl_H-290);
+          if (cl_W < 520) {
+          $(".main").css({'background-image': "url(images/map-82.jpg)"});
+          } else {
+              $(".main").css({'background-image': "url(images/map-81.jpg)"});
+
+          }
+          
         } 
         else {
           $(".bike").css("display", "block");
-          $(".bike").css("margin-top", 135);
+          $(".bike").css("margin-top", 20);
           $(".bike").css("margin-left", 20);
-          $(".header").css("margin-top", 20);
+          $(".header").css("margin-top", 90);
           $(".header").css("margin-left", 20);
           $(".smallMap").css("display", "block");
           $(".smallMap").css("margin-top",cl_H-320);
           $(".smallMap").css("margin-left",20);
           $("h1").css("font-size",36);
-          $(".after-h1").css("font-size",16);
-          $(".after-h1").css("line-height","26px");
           $(".legend").css("margin-left",cl_W-550);
-          $(".legend").css("margin-top",cl_H-355);
+          $(".legend").css("margin-top",cl_H-370);
+          $(".main").css({'background-image': "url(images/map-80.jpg)"});
         }
 
       });
@@ -79,25 +62,30 @@
           $(".header").css("margin-left", 20);
           $(".smallMap").css("display", "none");
           $("h1").css("font-size",30);
-          $(".after-h1").css("font-size",14);
-          $(".after-h1").css("line-height","22px");
           $(".legend").css("margin-left", cl_W-550);
-          $(".legend").css("margin-top",cl_H-337);
+          $(".legend").css("margin-top",cl_H-290);
+          if (cl_W < 520) {
+          $(".main").css({'background-image': "url(images/map-82.jpg)"});
+          } else {
+              $(".main").css({'background-image': "url(images/map-81.jpg)"});
+
+          }
+          
         } 
         else {
+          
           $(".bike").css("display", "block");
-          $(".bike").css("margin-top", 135);
+          $(".bike").css("margin-top", 20);
           $(".bike").css("margin-left", 20);
-          $(".header").css("margin-top", 20);
+          $(".header").css("margin-top", 90);
           $(".header").css("margin-left", 20);
           $(".smallMap").css("display", "block");
           $(".smallMap").css("margin-top",cl_H-320);
           $(".smallMap").css("margin-left",20);
           $("h1").css("font-size",36);
-          $(".after-h1").css("font-size",16);
-          $(".after-h1").css("line-height","26px");
           $(".legend").css("margin-left",cl_W-550);
-          $(".legend").css("margin-top",cl_H-355);
+          $(".legend").css("margin-top",cl_H-370);
+          $(".main").css({'background-image': "url(images/map-80.jpg)"});
         }
         
       });
@@ -108,39 +96,23 @@
 
 <div class="bike" width="130" height="66"><img width="130" height="" src="images/bike.png"></div>
 <div class="header">
-    <h1>Веломаршруты</h1>
-    <p class="after-h1">Самые популярные этим летом <br>маршруты <a href="http://velobike.ru">городского велопроката</a></p>
+    <h1 style="">Веломаршруты</h1>
+    <p style="font-family: 'Open Sans', Arial, sans-serif; font-size: 16px; margin-top: 0px;">Самые популярные маршруты <br><a href="http://velobike.ru">городского велопроката</a></p>
 </div>
 
 <div class="legend">
 
-  <div class="like" style="margin-left: 110px; margin-bottom: 20px;">
-      
-      <div style="float:left;" class="fb-like" data-href="http://velobike.datalaboratory.ru/" data-width="90" data-layout="button_count" data-show-faces="false" data-send="false"></div>
-
-      <div style="float:left; margin-left: 20px;">
-        <div id="vk_like"></div>
-        <script type="text/javascript">
-        VK.Widgets.Like("vk_like", {type: "mini", height: 20});
-        </script>
-      </div>
-
-      <a href="http://velobike.datalaboratory.ru/" class="twitter-share-button" data-lang="en">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-    </div>
-
     <div class="innerLegend">
       <div class="legContainer">
         <div class="thickness">
-          <p style="margin-bottom:2px;"><b>Поездок</b></p><p style="font-size:12px; line-height:10px; margin:0;">с 1 июня по 30 августа</p>
-          <div class="plot" height="36px" style="float:left; margin-top:8px;"><img height="36px" width="80px" src="images/thickness.png"></div>
-          <div class="plotText" width="110px" height="36px" style="float:left; font-size:10px; margin-left:5px; margin-top:18px;">1500</div>
+          <p><b>Загруженность</b></p>
+          <div class="plot" height="36px" style="float:left; margin-top:5px;"><img height="36px" width="80px" src="images/thickness.png"></div>
+          <div class="plotText" width="110px" height="36px" style="float:left; margin-left:10px; margin-top:5px;">1500<br/>поездок</div>
         </div>
         <div class="color">
           <p><b>Направление</b></p>
-          <div class="plot" height="36px" style="float:left; margin-top:8px "><img height="36px" width="35px" src="images/color.png"></div>
-          <div class="plotText" width="160px" height="36px" style="float:left;  margin-left: 10px; margin-top:8px; font-size:12px; "><span style="color: #00afec;">против</span> и <span style="color: #ef4744;">по</span><br/>часовой стрелке</div>
+          <div class="plot" height="36px" style="float:left; margin-top:5px "><img height="36px" width="35px" src="images/color.png"></div>
+          <div class="plotText" width="160px" height="36px" style="float:left; margin-left: 10px; margin-top:5px;"><span style="color: #00afec;">против</span> и <span style="color: #ef4744;">по</span><br/>часовой стрелке</div>
         </div>
         <div class="clear" style="clear:both;" width="400px"></div>
         <div class="roundabout">
@@ -149,25 +121,16 @@
         </div>
       </div>
       <div class="signature">
-        <p>Визуализация<br><a href="http://datalaboratory.ru">Лаборатории данных</a></p>
-        <p>Координатор<br/><a href="http://stepan.ru">Степан Чижов</a></p>
-        <p>Данные предоставлены <br> <a href="http://www.bm.ru">Банком Москвы</a></p>
+        Дизайн:<br/>
+        <a href="http://datalaboratory.ru">Лаборатория данных</a>
+        <br/><br/>
+        Координатор:<br/>
+        <a href="http://stepan.ru">Степан Чижов</a> <br/><br/>
+        Данные предоставлены <br> <a href="http://www.bm.ru">Банком Москвы</a>
       </div>
     </div>
   </div>
   
   </div>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-41635147-1', 'datalaboratory.ru');
-  ga('send', 'pageview');
-
-</script>
-
 </body>
 </html>

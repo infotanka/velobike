@@ -9,6 +9,11 @@
 .legend .innerLegend .legContainer .roundabout {width: 200; height: 50; margin-top: 5px;}
 .legend .innerLegend .signature {float:left; font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; width:200px; height:90px;  margin-top: 0px; margin-left: 40px;}
 
+.like {
+	margin-left: 110px; 
+	margin-bottom: 15px;
+}
+
 h1 {
 	font-family: 'Open Sans', Arial, sans-serif; 
 	font-weight:900; 

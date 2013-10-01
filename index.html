@@ -2,16 +2,37 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title></title>
+<title>Веломаршруты. Самые популярные маршруты городского велопроката. Визуализация Лаборатории данных.</title>
   <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="image_src" href="images/screenshot.jpg" />
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <!--[if lte IE 8]>
     <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
   <![endif]-->
+
+    
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?101"></script>
+
+  <script type="text/javascript">
+    VK.init({apiId: 3908612, onlyWidgets: true});
+  </script>
 </head>
 
 <body style="margin:0; padding:0;">
+
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=237838789600836";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+
   <div class="main">
     <script type='text/javascript'>
 
@@ -30,6 +51,7 @@
           $(".legend").css("width",610);
           $(".signature").css("width",170);
           $(".signature").css("margin-left",40);
+          $(".like").css("margin-left",110);
           if (cl_W < 700) {
             $(".main").css({'background-image': "url(images/map-81.jpg)"});
             $(".legend").css("margin-left", (cl_W-535)/2);
@@ -38,7 +60,8 @@
               $(".signature").css("width",320);
               $(".signature").css("margin-left",20);
               $(".legend").css("margin-left", (cl_W-345)/2);
-              $(".legend").css("margin-top",cl_H-380);
+              $(".legend").css("margin-top",cl_H-390);
+              $(".like").css("margin-left",0);
               if (cl_W < 400) {
                   $(".main").css({'background-image': "url(images/map-81.jpg)"});
                 } else {
@@ -86,6 +109,7 @@
           $(".legend").css("width",610);
           $(".signature").css("width",170);
           $(".signature").css("margin-left",40);
+          $(".like").css("margin-left",110);
           if (cl_W < 700) {
             $(".main").css({'background-image': "url(images/map-81.jpg)"});
             $(".legend").css("margin-left", (cl_W-535)/2);
@@ -94,7 +118,8 @@
               $(".signature").css("width",320);
               $(".signature").css("margin-left",20);
               $(".legend").css("margin-left", (cl_W-345)/2);
-              $(".legend").css("margin-top",cl_H-380);
+              $(".legend").css("margin-top",cl_H-390);
+              $(".like").css("margin-left",0);
               if (cl_W < 400) {
                   $(".main").css({'background-image': "url(images/map-81.jpg)"});
                 } else {
@@ -140,7 +165,7 @@
 
 <div class="legend">
 
-  <div class="like" style="margin-left: 110px; margin-bottom: 15px;">
+  <div class="like">
       
       <div style="float:left;" class="fb-like" data-href="http://velobike.datalaboratory.ru/" data-width="90" data-layout="button_count" data-show-faces="false" data-send="false"></div>
 
@@ -176,7 +201,7 @@
       </div>
       <div class="signature">
         <p width="170px" style="margin: 7px 0 0 0;">Визуализация <a href="http://datalaboratory.ru">Лаборатории&nbsp;данных</a></p>
-        <p width="170px" style="margin: 7px 0 0 0;">Координатор — <a href="http://stepan.ru">Степан&nbsp;Чижов</a> </p>
+        <p width="170px" style="margin: 7px 0 0 0;">Координатор <a href="http://stepan.ru">Степан&nbsp;Чижов</a> </p>
         <p width="170px" style="margin: 7px 0 0 0;">Данные предоставлены <a href="http://www.bm.ru">Банком&nbsp;Москвы</a></p>
       </div>
     </div>

@@ -31,6 +31,9 @@
           $(".after-h1").css("line-height","22px");
           $(".legend").css("margin-left", cl_W-550);
           $(".legend").css("margin-top",cl_H-287);
+          var shiftCoeff = 120 - 120/450*(cl_W - 400);
+          var bgPos = 0 - cl_W/2600*1000+shiftCoeff;
+          $(".main").css({'background-position': "0px " + bgPos+ "px"});
         } 
         else {
           $(".bike").css("display", "block");
@@ -46,6 +49,8 @@
           $(".after-h1").css("line-height","26px");
           $(".legend").css("margin-left",cl_W-550);
           $(".legend").css("margin-top",cl_H-305);
+          var bgPos = 0 - cl_W/2600*1000;
+          $(".main").css({'background-position': "0px " + bgPos+ "px"});
         }
 
       });
@@ -64,6 +69,9 @@
           $(".after-h1").css("line-height","22px");
           $(".legend").css("margin-left", cl_W-550);
           $(".legend").css("margin-top",cl_H-287);
+          var shiftCoeff = 120 - 120/450*(cl_W - 400);
+          var bgPos = 0 - cl_W/2600*1000+shiftCoeff;
+          $(".main").css({'background-position': "0px " + bgPos+ "px"});
         } 
         else {
           $(".bike").css("display", "block");
@@ -79,6 +87,8 @@
           $(".after-h1").css("line-height","26px");
           $(".legend").css("margin-left",cl_W-550);
           $(".legend").css("margin-top",cl_H-305);
+          var bgPos = 0 - cl_W/2600*1000;
+          $(".main").css({'background-position': "0px " + bgPos+ "px"});
         }
         
       });

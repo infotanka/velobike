@@ -6,15 +6,34 @@
   <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="image_src" href="i/screenshot.jpg" />
+  <link rel="image_src" href="images/screenshot.jpg" />
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <!--[if lte IE 8]>
     <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
   <![endif]-->
+  
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?101"></script>
+
+  <script type="text/javascript">
+    VK.init({apiId: 3908612, onlyWidgets: true});
+  </script>
+
 </head>
 
 <body style="margin:0; padding:0;">
-  <div class="main">
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=237838789600836";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+
+    <div class="main">
     <script type='text/javascript'>
 
       $( document ).ready(function() {
@@ -30,10 +49,7 @@
           $(".after-h1").css("font-size",14);
           $(".after-h1").css("line-height","22px");
           $(".legend").css("margin-left", cl_W-550);
-          $(".legend").css("margin-top",cl_H-287);
-          var shiftCoeff = 120 - 120/450*(cl_W - 400);
-          var bgPos = 0 - cl_W/2600*1000+shiftCoeff;
-          $(".main").css({'background-position': "0px " + bgPos+ "px"});
+          $(".legend").css("margin-top",cl_H-337);
         } 
         else {
           $(".bike").css("display", "block");
@@ -48,9 +64,7 @@
           $(".after-h1").css("font-size",16);
           $(".after-h1").css("line-height","26px");
           $(".legend").css("margin-left",cl_W-550);
-          $(".legend").css("margin-top",cl_H-305);
-          var bgPos = 0 - cl_W/2600*1000;
-          $(".main").css({'background-position': "0px " + bgPos+ "px"});
+          $(".legend").css("margin-top",cl_H-355);
         }
 
       });
@@ -68,10 +82,7 @@
           $(".after-h1").css("font-size",14);
           $(".after-h1").css("line-height","22px");
           $(".legend").css("margin-left", cl_W-550);
-          $(".legend").css("margin-top",cl_H-287);
-          var shiftCoeff = 120 - 120/450*(cl_W - 400);
-          var bgPos = 0 - cl_W/2600*1000+shiftCoeff;
-          $(".main").css({'background-position': "0px " + bgPos+ "px"});
+          $(".legend").css("margin-top",cl_H-337);
         } 
         else {
           $(".bike").css("display", "block");
@@ -86,9 +97,7 @@
           $(".after-h1").css("font-size",16);
           $(".after-h1").css("line-height","26px");
           $(".legend").css("margin-left",cl_W-550);
-          $(".legend").css("margin-top",cl_H-305);
-          var bgPos = 0 - cl_W/2600*1000;
-          $(".main").css({'background-position': "0px " + bgPos+ "px"});
+          $(".legend").css("margin-top",cl_H-355);
         }
         
       });
@@ -104,6 +113,23 @@
 </div>
 
 <div class="legend">
+
+  <div class="like" style="margin-left: 110px; margin-bottom: 20px;">
+      
+      <div style="float:left;" class="fb-like" data-href="http://velobike.datalaboratory.ru/" data-width="90" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+
+      <div style="float:left; margin-left: 20px;">
+        <div id="vk_like"></div>
+        <script type="text/javascript">
+        VK.Widgets.Like("vk_like", {type: "mini", height: 20});
+        </script>
+      </div>
+
+      <a href="http://velobike.datalaboratory.ru/" class="twitter-share-button" data-lang="en">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    </div>
+
     <div class="innerLegend">
       <div class="legContainer">
         <div class="thickness">

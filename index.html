@@ -19,58 +19,57 @@
         var cl_W = document.body.clientWidth;
         var cl_H = window.innerHeight;
 
-        $(".smallMap").css("margin-top",cl_H - 320);
-        $(".smallMap").css("margin-left",20);
-        $(".legend").css("margin-top",cl_H - 320);
-        $(".header").css("margin-top", 20);
-        $(".header").css("margin-left", 20);
-
-        if(cl_W-550-130 > 320)
-        {
-          $(".bike").css("margin-top",cl_H - 300);
-          $(".bike").css("margin-left",cl_W - 550-130);
-        }
+        if (cl_W < 850) {
+          $(".bike").css("display", "none");
+          $(".header").css("margin-top", 20);
+          $(".header").css("margin-left", 20);
+          $(".smallMap").css("display", "none");
+          $("h1").css("font-size",30);
+          $(".legend").css("margin-left", 20);
+          $(".legend").css("margin-top",cl_H - 380);
+        } 
         else {
-          if (cl_W-530 > 340)
-          {
-            $(".bike").css("margin-top",cl_H - 300-45);
-            $(".bike").css("margin-left",cl_W - 530);
-          } else {
-            $(".bike").css("margin-top",cl_H - 300-45);
-            $(".bike").css("margin-left", 340);}
+          $(".bike").css("display", "block");
+          $(".bike").css("margin-top", 30);
+          $(".bike").css("margin-left", 20);
+          $(".header").css("margin-top", 100);
+          $(".header").css("margin-left", 20);
+          $(".smallMap").css("display", "block");
+          $(".smallMap").css("margin-top",cl_H - 320);
+          $(".smallMap").css("margin-left",20);
+          $("h1").css("font-size",36);
+          $(".legend").css("margin-left",cl_W-550);
+          $(".legend").css("margin-top",cl_H - 380);
         }
-
-        if (cl_W-550 > 320)
-        {
-        $(".legend").css("margin-left",cl_W-550);
-        } else {$(".legend").css("margin-left",320);}
 
       });
 
       $( window ).resize(function() {
         var cl_W = document.body.clientWidth;
         var cl_H = window.innerHeight;
-        $(".smallMap").css("margin-top",cl_H - 320);
-        $(".smallMap").css("margin-left",20);
-        $(".legend").css("margin-top",cl_H - 320);
-        if(cl_W-550-130 > 320)
-        {
-          $(".bike").css("margin-top",cl_H - 300);
-          $(".bike").css("margin-left",cl_W - 550-130);
-        }
+
+        if (cl_W < 850) {
+          $(".bike").css("display", "none");
+          $(".header").css("margin-top", 20);
+          $(".header").css("margin-left", 20);
+          $(".smallMap").css("display", "none");
+          $("h1").css("font-size",30);
+          $(".legend").css("margin-left", 20);
+          $(".legend").css("margin-top",cl_H - 380);
+        } 
         else {
-          if (cl_W-530 > 340)
-          {
-            $(".bike").css("margin-top",cl_H - 300-45);
-            $(".bike").css("margin-left",cl_W - 530);
-          } else {
-            $(".bike").css("margin-top",cl_H - 300-45);
-            $(".bike").css("margin-left", 340);}
+          $(".bike").css("display", "block");
+          $(".bike").css("margin-top", 30);
+          $(".bike").css("margin-left", 20);
+          $(".header").css("margin-top", 100);
+          $(".header").css("margin-left", 20);
+          $(".smallMap").css("display", "block");
+          $(".smallMap").css("margin-top",cl_H - 320);
+          $(".smallMap").css("margin-left",20);
+          $("h1").css("font-size",36);
+          $(".legend").css("margin-left",cl_W-550);
+          $(".legend").css("margin-top",cl_H - 380);
         }
-        if (cl_W-550 > 320)
-        {
-        $(".legend").css("margin-left",cl_W-550);
-        } else {$(".legend").css("margin-left",320);}
         
       });
 
@@ -79,12 +78,13 @@
 <div class="smallMap" width="266" height="300" z-index="50"><img src="images/tabbarmap.jpg" width="266" height="300"></div>
 
 <div class="bike" width="130" height="66"><img width="130" height="" src="images/bike.png"></div>
-  
+<div class="header">
+    <h1 style="">Веломаршруты</h1>
+    <p style="font-family: 'Open Sans', Arial, sans-serif; font-size: 16px; margin-top: 0px;">Самые популярные маршруты <br><a href="http://velobike.ru">городского велопроката</a></p>
+</div>
+
 <div class="legend" style="margin-top: -137px; margin-left: 604px;">
-  <div class="legHeader">
-      <h1 style="font-family: 'Open Sans', Arial, sans-serif; font-weight:900; font-size: 36px; margin-top:0px; margin-bottom: 0px;">Веломаршруты</h1>
-      <p style="font-family: 'Open Sans', Arial, sans-serif; font-size: 16px; margin-top: 0px;">Самые популярные маршруты <a href="http://velobike.ru">городского велопроката</a></p>
-    </div>
+
     <div style="clear:both;"></div>
     <div class="innerLegend">
       <div class="legContainer">

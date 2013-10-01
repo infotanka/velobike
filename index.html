@@ -27,8 +27,12 @@
           $("h1").css("font-size",30);
           $(".legend").css("margin-left", cl_W-550);
           $(".legend").css("margin-top",cl_H-290);
-          if (cl_W < 520) {
-          $(".main").css({'background-image': "url(images/map-82.jpg)"});
+          if (cl_W < 550) {
+            if (cl_W < 400) {
+                $(".main").css({'background-image': "url(images/map-82-2.jpg)"});
+              } else {
+                 $(".main").css({'background-image': "url(images/map-82-1.jpg)"});
+              }
           } else {
               $(".main").css({'background-image': "url(images/map-81.jpg)"});
 
@@ -64,8 +68,11 @@
           $("h1").css("font-size",30);
           $(".legend").css("margin-left", cl_W-550);
           $(".legend").css("margin-top",cl_H-290);
-          if (cl_W < 520) {
-          $(".main").css({'background-image': "url(images/map-82.jpg)"});
+          if (cl_W < 550) {if (cl_W < 400) {
+                $(".main").css({'background-image': "url(images/map-82-2.jpg)"});
+              } else {
+                 $(".main").css({'background-image': "url(images/map-82-1.jpg)"});
+              }
           } else {
               $(".main").css({'background-image': "url(images/map-81.jpg)"});
 

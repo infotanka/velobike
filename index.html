@@ -5,6 +5,7 @@
 <title>Веломаршруты. Самые популярные маршруты городского велопроката. Визуализация Лаборатории данных.</title>
   <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico">
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <!--[if lte IE 8]>
     <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
@@ -26,22 +27,24 @@
           $(".smallMap").css("display", "none");
           $("h1").css("font-size",30);
           $(".after-h1").css("font-size",14);
+          $(".after-h1").css("line-height","22px");
           $(".legend").css("margin-left", cl_W-550);
-          $(".legend").css("margin-top",cl_H-285);
+          $(".legend").css("margin-top",cl_H-287);
         } 
         else {
           $(".bike").css("display", "block");
-          $(".bike").css("margin-top", 20);
+          $(".bike").css("margin-top", 135);
           $(".bike").css("margin-left", 20);
-          $(".header").css("margin-top", 90);
+          $(".header").css("margin-top", 20);
           $(".header").css("margin-left", 20);
           $(".smallMap").css("display", "block");
           $(".smallMap").css("margin-top",cl_H-320);
           $(".smallMap").css("margin-left",20);
           $("h1").css("font-size",36);
           $(".after-h1").css("font-size",16);
+          $(".after-h1").css("line-height","26px");
           $(".legend").css("margin-left",cl_W-550);
-          $(".legend").css("margin-top",cl_H-370);
+          $(".legend").css("margin-top",cl_H-305);
         }
 
       });
@@ -57,22 +60,24 @@
           $(".smallMap").css("display", "none");
           $("h1").css("font-size",30);
           $(".after-h1").css("font-size",14);
+          $(".after-h1").css("line-height","22px");
           $(".legend").css("margin-left", cl_W-550);
-          $(".legend").css("margin-top",cl_H-285);
+          $(".legend").css("margin-top",cl_H-287);
         } 
         else {
           $(".bike").css("display", "block");
-          $(".bike").css("margin-top", 20);
+          $(".bike").css("margin-top", 135);
           $(".bike").css("margin-left", 20);
-          $(".header").css("margin-top", 90);
+          $(".header").css("margin-top", 20);
           $(".header").css("margin-left", 20);
           $(".smallMap").css("display", "block");
           $(".smallMap").css("margin-top",cl_H-320);
           $(".smallMap").css("margin-left",20);
           $("h1").css("font-size",36);
           $(".after-h1").css("font-size",16);
+          $(".after-h1").css("line-height","26px");
           $(".legend").css("margin-left",cl_W-550);
-          $(".legend").css("margin-top",cl_H-370);
+          $(".legend").css("margin-top",cl_H-305);
         }
         
       });
@@ -84,22 +89,21 @@
 <div class="bike" width="130" height="66"><img width="130" height="" src="images/bike.png"></div>
 <div class="header">
     <h1>Веломаршруты</h1>
-    <p class="after-h1">Самые популярные маршруты <br><a href="http://velobike.ru">городского велопроката</a></p>
+    <p class="after-h1">Самые популярные этим летом <br>маршруты <a href="http://velobike.ru">городского велопроката</a></p>
 </div>
 
 <div class="legend">
-
     <div class="innerLegend">
       <div class="legContainer">
         <div class="thickness">
-          <p><b>Загруженность</b></p>
-          <div class="plot" height="36px" style="float:left; margin-top:0px;"><img height="36px" width="80px" src="images/thickness.png"></div>
-          <div class="plotText" width="110px" height="36px" style="float:left; margin-left:10px; margin-top:0px;">1500<br/>поездок</div>
+          <p style="margin-bottom:2px;"><b>Поездок</b></p><p style="font-size:12px; line-height:10px; margin:0;">с 1 июня по 30 августа</p>
+          <div class="plot" height="36px" style="float:left; margin-top:8px;"><img height="36px" width="80px" src="images/thickness.png"></div>
+          <div class="plotText" width="110px" height="36px" style="float:left; font-size:10px; margin-left:5px; margin-top:18px;">1500</div>
         </div>
         <div class="color">
           <p><b>Направление</b></p>
-          <div class="plot" height="36px" style="float:left; margin-top:0px "><img height="36px" width="35px" src="images/color.png"></div>
-          <div class="plotText" width="160px" height="36px" style="float:left; margin-left: 10px; margin-top:0px;"><span style="color: #00afec;">против</span> и <span style="color: #ef4744;">по</span><br/>часовой стрелке</div>
+          <div class="plot" height="36px" style="float:left; margin-top:8px "><img height="36px" width="35px" src="images/color.png"></div>
+          <div class="plotText" width="160px" height="36px" style="float:left;  margin-left: 10px; margin-top:8px; font-size:12px; "><span style="color: #00afec;">против</span> и <span style="color: #ef4744;">по</span><br/>часовой стрелке</div>
         </div>
         <div class="clear" style="clear:both;" width="400px"></div>
         <div class="roundabout">
@@ -109,12 +113,24 @@
       </div>
       <div class="signature">
         <p>Визуализация<br><a href="http://datalaboratory.ru">Лаборатории данных</a></p>
-        <p>Координатор:<br/><a href="http://stepan.ru">Степан Чижов</a></p>
+        <p>Координатор<br/><a href="http://stepan.ru">Степан Чижов</a></p>
         <p>Данные предоставлены <br> <a href="http://www.bm.ru">Банком Москвы</a></p>
       </div>
     </div>
   </div>
   
   </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41635147-1', 'datalaboratory.ru');
+  ga('send', 'pageview');
+
+</script>
+
 </body>
 </html>

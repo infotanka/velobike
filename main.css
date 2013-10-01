@@ -1,13 +1,13 @@
 .smallMap {position:absolute;}
 .bike {position:absolute;}
-.legend {position:absolute; width:540px; height:160px;}
+.legend {position:absolute; width:550px; height:170px;}
 
-.legend .innerLegend {float:left; font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; width:500; height:200; background-color: rgba(248,248,248,0.8);}
-.legend .innerLegend .legContainer {width: 400; height: 140;float:left; margin-left: 20px;}
-.legend .innerLegend .legContainer .thickness {width: 200; height: 90; float:left; margin-top: 10px;}
-.legend .innerLegend .legContainer .color {width: 200; height: 90; float:left; margin-top: 10px; margin-left: 20px;}
-.legend .innerLegend .legContainer .roundabout {width: 200; height: 50; margin-top: 20px;}
-.legend .innerLegend .signature {float:left; font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; width:190px; height:90px;  margin-top: 10px; margin-left: 40px;}
+.legend .innerLegend {float:left; font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; width:510; height:210; background-color: rgba(248,248,248,0.8);}
+.legend .innerLegend .legContainer {width: 400; height: 150;float:left; margin-left: 20px;}
+.legend .innerLegend .legContainer .thickness {width: 200; height: 90; float:left; margin-top: 0px;}
+.legend .innerLegend .legContainer .color {width: 200; height: 90; float:left; margin-top: 0px; margin-left: 25px;}
+.legend .innerLegend .legContainer .roundabout {width: 200; height: 50; margin-top: 5px;}
+.legend .innerLegend .signature {float:left; font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; width:200px; height:90px;  margin-top: 0px; margin-left: 40px;}
 
 h1 {
 	font-family: 'Open Sans', Arial, sans-serif; 
@@ -15,6 +15,13 @@ h1 {
 	font-size: 36px; 
 	margin-top:0px; 
 	margin-bottom: 0px;
+}
+
+.after-h1 {
+	font-family: 'Open Sans', Arial, sans-serif; 
+	font-size: 16px; 
+	margin-top: 0px;
+	line-height: 26px;
 }
 
 .header { 

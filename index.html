@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title></title>
+  <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
+  <![endif]-->
+</head>
+
+<body style="margin:0; padding:0;">
+  <div class="main">
+    <script type='text/javascript'>
+
+      $( document ).ready(function() {
+        var cl_W = document.body.clientWidth;
+        var cl_H = window.innerHeight;
+
+        $(".smallMap").css("margin-top",cl_H - 320);
+        $(".smallMap").css("margin-left",20);
+        $(".legend").css("margin-top",cl_H - 320);
+        $(".header").css("margin-top", 20);
+        $(".header").css("margin-left", 20);
+
+        if(cl_W-550-130 > 320)
+        {
+          $(".bike").css("margin-top",cl_H - 300);
+          $(".bike").css("margin-left",cl_W - 550-130);
+        }
+        else {
+          if (cl_W-530 > 340)
+          {
+            $(".bike").css("margin-top",cl_H - 300-45);
+            $(".bike").css("margin-left",cl_W - 530);
+          } else {
+            $(".bike").css("margin-top",cl_H - 300-45);
+            $(".bike").css("margin-left", 340);}
+        }
+
+        if (cl_W-550 > 320)
+        {
+        $(".legend").css("margin-left",cl_W-550);
+        } else {$(".legend").css("margin-left",320);}
+
+      });
+
+      $( window ).resize(function() {
+        var cl_W = document.body.clientWidth;
+        var cl_H = window.innerHeight;
+        $(".smallMap").css("margin-top",cl_H - 320);
+        $(".smallMap").css("margin-left",20);
+        $(".legend").css("margin-top",cl_H - 320);
+        if(cl_W-550-130 > 320)
+        {
+          $(".bike").css("margin-top",cl_H - 300);
+          $(".bike").css("margin-left",cl_W - 550-130);
+        }
+        else {
+          if (cl_W-530 > 340)
+          {
+            $(".bike").css("margin-top",cl_H - 300-45);
+            $(".bike").css("margin-left",cl_W - 530);
+          } else {
+            $(".bike").css("margin-top",cl_H - 300-45);
+            $(".bike").css("margin-left", 340);}
+        }
+        if (cl_W-550 > 320)
+        {
+        $(".legend").css("margin-left",cl_W-550);
+        } else {$(".legend").css("margin-left",320);}
+        
+      });
+
+</script>
+
+<div class="smallMap" width="266" height="300" z-index="50"><img src="images/tabbarmap.jpg" width="266" height="300"></div>
+
+<div class="bike" width="130" height="66"><img width="130" height="" src="images/bike.png"></div>
+  
+<div class="legend" style="margin-top: -137px; margin-left: 604px;">
+  <div class="legHeader">
+      <h1 style="font-family: 'Open Sans', Arial, sans-serif; font-weight:900; font-size: 36px; margin-top:0px; margin-bottom: 0px;">Веломаршруты</h1>
+      <p style="font-family: 'Open Sans', Arial, sans-serif; font-size: 16px; margin-top: 0px;">Самые популярные маршруты <a href="http://velobike.ru">городского велопроката</a></p>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="innerLegend">
+      <div class="legContainer">
+        <div class="thickness">
+          <p><b>Загруженность</b></p>
+          <div class="plot" height="36px" style="float:left; margin-top:5px;"><img height="36px" width="80px" src="images/thickness.png"></div>
+          <div class="plotText" width="110px" height="36px" style="float:left; margin-left:10px; margin-top:5px;">1500<br/>поездок</div>
+        </div>
+        <div class="color">
+          <p><b>Направление</b></p>
+          <div class="plot" height="36px" style="float:left; margin-top:5px "><img height="36px" width="35px" src="images/color.png"></div>
+          <div class="plotText" width="160px" height="36px" style="float:left; margin-left: 10px; margin-top:5px;"><span style="color: #00afec;">против</span> и <span style="color: #ef4744;">по</span><br/>часовой стрелке</div>
+        </div>
+        <div class="clear" style="clear:both;" width="400px"></div>
+        <div class="roundabout">
+          <div class="imgRound" width="30" height="30" style="float:left;"><img  width="30" height="30"  src="images/round.png"></div>
+          <div class="textRound" width="100" height="30" style="float:left; margin-left: 10px; margin-top:8px;">Кольцевой маршрут</div>
+        </div>
+      </div>
+      <div class="signature">
+        Дизайн:<br/>
+        <a href="http://datalaboratory.ru">Лаборатория данных</a>
+        <br/><br/>
+        Координатор:<br/>
+        <a href="http://stepan.ru">Степан Чижов</a> <br/><br/>
+        Данные предоставлены <br> <a href="http://www.bm.ru">Банком Москвы</a>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+</body>
+</html>

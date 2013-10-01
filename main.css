@@ -1,0 +1,24 @@
+.smallMap {position:absolute;}
+.bike {position:absolute;}
+.legend { position:absolute; width:540px; height:250px; }
+.legend .legHeader {width:500px; height: 100;  margin-left: 20px; margin-top:40px;}
+.legend .innerLegend {float:left; font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; width:500; height:200; background-color: #f8f8f8;}
+.legend .innerLegend .legContainer {width: 400; height: 140;float:left; margin-left: 20px;}
+.legend .innerLegend .legContainer .thickness {width: 200; height: 90; float:left; margin-top: 10px;}
+.legend .innerLegend .legContainer .color {width: 200; height: 90; float:left; margin-top: 10px; margin-left: 20px;}
+.legend .innerLegend .legContainer .roundabout {width: 200; height: 50; margin-top: 20px;}
+.legend .innerLegend .signature {float:left; font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; width:170px; height:140px;  margin-top: 10px; margin-left: 40px;}
+.h1 {font-family: 'Open Sans',sans-serif;}
+
+.main {
+	top:0; 
+	bottom:0; 
+	width:100%; 
+	height: 100%;
+	position: absolute;
+	background: url(images/map.jpg) no-repeat;
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+}

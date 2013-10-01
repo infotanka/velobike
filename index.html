@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title></title>
+<title>Веломаршруты. Самые популярные маршруты городского велопроката. Визуализация Лаборатории данных.</title>
   <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -25,6 +25,7 @@
           $(".header").css("margin-left", 20);
           $(".smallMap").css("display", "none");
           $("h1").css("font-size",30);
+          $(".after-h1").css("font-size",14);
           $(".legend").css("margin-left", cl_W-550);
           $(".legend").css("margin-top",cl_H-290);
         } 
@@ -38,6 +39,7 @@
           $(".smallMap").css("margin-top",cl_H-320);
           $(".smallMap").css("margin-left",20);
           $("h1").css("font-size",36);
+          $(".after-h1").css("font-size",16);
           $(".legend").css("margin-left",cl_W-550);
           $(".legend").css("margin-top",cl_H-370);
         }
@@ -54,6 +56,7 @@
           $(".header").css("margin-left", 20);
           $(".smallMap").css("display", "none");
           $("h1").css("font-size",30);
+          $(".after-h1").css("font-size",14);
           $(".legend").css("margin-left", cl_W-550);
           $(".legend").css("margin-top",cl_H-290);
         } 
@@ -67,6 +70,7 @@
           $(".smallMap").css("margin-top",cl_H-320);
           $(".smallMap").css("margin-left",20);
           $("h1").css("font-size",36);
+          $(".after-h1").css("font-size",16);
           $(".legend").css("margin-left",cl_W-550);
           $(".legend").css("margin-top",cl_H-370);
         }
@@ -79,8 +83,8 @@
 
 <div class="bike" width="130" height="66"><img width="130" height="" src="images/bike.png"></div>
 <div class="header">
-    <h1 style="">Веломаршруты</h1>
-    <p style="font-family: 'Open Sans', Arial, sans-serif; font-size: 16px; margin-top: 0px;">Самые популярные маршруты <br><a href="http://velobike.ru">городского велопроката</a></p>
+    <h1>Веломаршруты</h1>
+    <p class="after-h1">Самые популярные маршруты <br><a href="http://velobike.ru">городского велопроката</a></p>
 </div>
 
 <div class="legend">
@@ -89,13 +93,13 @@
       <div class="legContainer">
         <div class="thickness">
           <p><b>Загруженность</b></p>
-          <div class="plot" height="36px" style="float:left; margin-top:5px;"><img height="36px" width="80px" src="images/thickness.png"></div>
-          <div class="plotText" width="110px" height="36px" style="float:left; margin-left:10px; margin-top:5px;">1500<br/>поездок</div>
+          <div class="plot" height="36px" style="float:left; margin-top:0px;"><img height="36px" width="80px" src="images/thickness.png"></div>
+          <div class="plotText" width="110px" height="36px" style="float:left; margin-left:10px; margin-top:0px;">1500<br/>поездок</div>
         </div>
         <div class="color">
           <p><b>Направление</b></p>
-          <div class="plot" height="36px" style="float:left; margin-top:5px "><img height="36px" width="35px" src="images/color.png"></div>
-          <div class="plotText" width="160px" height="36px" style="float:left; margin-left: 10px; margin-top:5px;"><span style="color: #00afec;">против</span> и <span style="color: #ef4744;">по</span><br/>часовой стрелке</div>
+          <div class="plot" height="36px" style="float:left; margin-top:0px "><img height="36px" width="35px" src="images/color.png"></div>
+          <div class="plotText" width="160px" height="36px" style="float:left; margin-left: 10px; margin-top:0px;"><span style="color: #00afec;">против</span> и <span style="color: #ef4744;">по</span><br/>часовой стрелке</div>
         </div>
         <div class="clear" style="clear:both;" width="400px"></div>
         <div class="roundabout">
@@ -104,12 +108,9 @@
         </div>
       </div>
       <div class="signature">
-        Дизайн:<br/>
-        <a href="http://datalaboratory.ru">Лаборатория данных</a>
-        <br/><br/>
-        Координатор:<br/>
-        <a href="http://stepan.ru">Степан Чижов</a> <br/><br/>
-        Данные предоставлены <br> <a href="http://www.bm.ru">Банком Москвы</a>
+        <p>Визуализация<br><a href="http://datalaboratory.ru">Лаборатории данных</a></p>
+        <p>Координатор:<br/><a href="http://stepan.ru">Степан Чижов</a></p>
+        <p>Данные предоставлены <br> <a href="http://www.bm.ru">Банком Москвы</a></p>
       </div>
     </div>
   </div>
